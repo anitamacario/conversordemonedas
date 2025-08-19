@@ -10,21 +10,18 @@ class ConversorApp {
 
     private static final String API_KEY = "25aaffab0febe831d614dc77";
 
-    // Nombres de monedas para mostrar en el menú
     private static final String[] NOMBRES_MONEDAS = {
             "Dólar estadounidense", "Dólar canadiense", "Peso mexicano",
             "Peso colombiano", "Peso argentino", "Real brasileño",
             "Euros", "Yen japonés", "Won surcoreano", "Yuan chino"
     };
 
-    // Códigos de moneda correspondientes a cada nombre
     private static final String[] CODIGOS_MONEDAS = {
             "USD", "CAD", "MXN",
             "COP", "ARS", "BRL",
             "EUR", "JPY", "KRW", "CNY"
     };
 
-    // Método para obtener la tasa de conversión
     public static double getExchangeRate(String fromCurrency, String toCurrency) {
         double rate = 0.0;
         try {
@@ -55,7 +52,7 @@ class ConversorApp {
         return rate;
     }
 
-    // Método para mostrar el menú de monedas
+
     private static void mostrarMenu() {
         System.out.println("\nOpciones de monedas:");
         for (int i = 0; i < NOMBRES_MONEDAS.length; i++) {
@@ -99,7 +96,7 @@ class ConversorApp {
                 System.out.println("No se pudo realizar la conversión.");
             }
 
-            // Preguntar si desea continuar
+            // Preguntar si continuar
             System.out.print("\n¿Deseas hacer otra conversión? (si/no): ");
             String respuesta = scanner.next().toLowerCase();
             if (!respuesta.equals("si")) {
